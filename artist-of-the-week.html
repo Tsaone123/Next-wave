@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Artist of the Week – NextWave</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #ff9900;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #1f1f1f;
+      border-radius: 10px;
+    }
+
+    .artist-info {
+      text-align: center;
+    }
+
+    .artist-info h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .artist-info img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 4px solid #ff9900;
+    }
+
+    iframe {
+      width: 100%;
+      height: 150px;
+      margin: 10px 0;
+      border: none;
+    }
+
+    .interview-link {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .interview-link a {
+      color: #ff9900;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .vote-reminder {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 16px;
+    }
+
+    .vote-reminder a {
+      color: #00ccff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎤 Artist of the Week</h1>
+  </header>
+
+  <div class="container">
+    <div class="artist-info">
+      <img src="artist-photo.jpg" alt="Artist Photo">
+      <h2>Kwena Boi</h2>
+      <p>Trap meets tradition – storytelling with bars and vibes!</p>
+
+      <!-- SoundCloud Embeds -->
+      <iframe scrolling="no" frameborder="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_1&color=%23ff5500&inverse=false&auto_play=false&show_user=true">
+      </iframe>
+      <iframe scrolling="no" frameborder="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_2&color=%23ff5500&inverse=false&auto_play=false&show_user=true">
+      </iframe>
+      <iframe scrolling="no" frameborder="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/TRACK_ID_3&color=%23ff5500&inverse=false&auto_play=false&show_user=true">
+      </iframe>
+    </div>
+
+    <div class="interview-link">
+      <a href="interview.html">📄 Read Exclusive Interview with Kwena Boi</a>
+    </div>
+
+    <div class="vote-reminder">
+      🌟 Want to choose next week’s artist? <a href="vote.html">Vote here</a>
+    </div>
+  </div>
+
+</body>
+</html>
