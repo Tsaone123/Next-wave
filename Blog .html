@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NextWave Blog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .blog-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .post {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+
+    .post img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .post h2 {
+      margin: 15px 0 10px;
+      color: #222;
+    }
+
+    .post p {
+      color: #555;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 10px;
+      background: #0066cc;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .read-more:hover {
+      background: #004799;
+    }
+
+    .reaction-box, .comment-box {
+      margin-top: 15px;
+    }
+
+    .heart-btn {
+      cursor: pointer;
+      font-size: 18px;
+      color: red;
+    }
+
+    .comment-box textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      margin-top: 8px;
+    }
+
+    .comment-box button {
+      margin-top: 6px;
+      padding: 6px 12px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .comment-box button:hover {
+      background: #218838;
+    }
+
+    .comments {
+      margin-top: 10px;
+    }
+
+    .comment {
+      background: #f9f9f9;
+      padding: 8px;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>NextWave Blog</h1>
+  <div class="blog-container">
+
+    <div class="post" id="post1">
+      <img src="https://via.placeholder.com/800x400" alt="Artist photo">
+      <h2>Meet Lebo: The Rising Voice from Gaborone</h2>
+      <p><strong>By:</strong> NextWave Team</p>
+      <p>Lebo is changing the game in Botswana's R&B scene...</p>
+      <a href="#" class="read-more">Read More</a>
+
+      <!-- Reaction -->
+      <div class="reaction-box">
+        <span class="heart-btn" onclick="lovePost('post1')">❤️</span>
+        <span id="love-count-post1">0</span> loves
+      </div>
+
+      <!-- Comment Section -->
+      <div class="comment-box">
+        <textarea id="comment-input-post1" placeholder="Write a comment..."></textarea>
+        <button onclick="postComment('post1')">Post Comment</button>
+        <div class="comments" id="comments-post1"></div>
+      </div>
+    </div>
+
+    <!-- You can copy this post block again for more posts -->
+
+  </div>
+
+  <script>
+    function lovePost(postId) {
+      const loveCountEl = document.getElementById('love-count-' + postId);
+      let currentCount = parseInt(loveCountEl.textContent);
+      loveCountEl.textContent = currentCount + 1;
+    }
+
+    function postComment(postId) {
+      const inputEl = document.getElementById('comment-input-' + postId);
+      const commentText = inputEl.value.trim();
+      if (commentText === "") return;
+
+      const commentBox = document.getElementById('comments-' + postId);
+      const commentDiv = document.createElement('div');
+      commentDiv.classList.add('comment');
+      commentDiv.textContent = commentText;
+
+      commentBox.appendChild(commentDiv);
+      inputEl.value = "";
+    }
+  </script>
+
+</body>
+</html>
