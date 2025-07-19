@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MyPlaylist – Share Your Sound</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #222;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .playlist-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: 20px auto;
+    }
+
+    iframe {
+      width: 100%;
+      height: 130px;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+
+    .playlist-title {
+      font-weight: bold;
+      font-size: 18px;
+      color: #111;
+    }
+
+    .playlist-description {
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎧 MyPlaylist – Share Your Sound</h1>
+
+  <form>
+    <label for="playlistName">Playlist Name:</label>
+    <input type="text" id="playlistName" placeholder="e.g. Vibes for Sundays">
+
+    <label for="description">Description:</label>
+    <textarea id="description" placeholder="Tell us what kind of vibe this playlist brings..."></textarea>
+
+    <label for="song1">SoundCloud Embed Link - Song 1:</label>
+    <input type="text" id="song1" placeholder="Paste your SoundCloud embed link here">
+
+    <label for="song2">SoundCloud Embed Link - Song 2:</label>
+    <input type="text" id="song2" placeholder="Optional">
+
+    <label for="song3">SoundCloud Embed Link - Song 3:</label>
+    <input type="text" id="song3" placeholder="Optional">
+
+    <button type="submit">Submit Playlist</button>
+  </form>
+
+  <!-- MOCK DISPLAY AREA (Example Playlist) -->
+  <div class="playlist-card">
+    <div class="playlist-title">Chill Evening Beats</div>
+    <div class="playlist-description">Smooth, lo-fi and soulful tracks to wind down your day.</div>
+
+    <iframe scrolling="no" frameborder="no" allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/exampletrack1"></iframe>
+
+    <iframe scrolling="no" frameborder="no" allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/exampletrack2"></iframe>
+
+    <iframe scrolling="no" frameborder="no" allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/exampletrack3"></iframe>
+  </div>
+
+</body>
+      </html>
